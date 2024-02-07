@@ -49,3 +49,5 @@ elif accion == 3:
     pass
 else :
     print('Esta opcion no es valida')
+
+    print("FIN")
