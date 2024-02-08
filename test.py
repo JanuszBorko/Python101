@@ -3,15 +3,20 @@
 # print(datetime.datetime.now())
 
 
-import datetime 
+# import datetime 
 
-hoy = datetime.datetime.now()
+# hoy = datetime.datetime.now()
 
-print(hoy.day)
-print(hoy.month)
-print(hoy.microsecond)
+# print(hoy.day)
+# print(hoy.month)
+# print(hoy.microsecond)
 
-s = datetime.datetime.strptime("2012/01/17", "%Y/%m/%d")
+# s = datetime.datetime.strptime("2012/01/17", "%Y/%m/%d")
 
-print(s + datetime.timedelta(days=100))
+# print(s + datetime.timedelta(days=100))
+# datetime.datetime.strptime()
+
+
+import webbrowser
+webbrowser.open("http://www.google.com")
                         

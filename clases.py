@@ -16,11 +16,12 @@ import random
 # print(random.randint(1,26))
 
 lista = [['lunes',1],['martes',1],['miercoles',1],['jueves',1],['viernes',1]]
-for x in range(10):
-    dia = random.choice(lista[0::][0])
-    print(dia)
+# for x in range(10):
+#     dia = random.choice(lista[0::][0])
+#     print(dia)
 
-
+print(lista[:][0])
+for 
 
     
    
