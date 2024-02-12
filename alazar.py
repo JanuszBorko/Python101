@@ -1,16 +1,3 @@
-# import math as m
-
-# x = 5.75
-# print(m.ceil(x))
-
-
-# from math import ceil, floor   # para importar solamente funciones elegidas, optimizar el codigo
-
-# x = 5.75
-# print(ceil(x))
-
-
-
 import random
 # print(random.random())
 # print(random.randint(1,26))
@@ -27,9 +14,3 @@ suma = 0
 for y in lista.values():
     suma = suma + y
 print(suma)
-
-
-
-
-    
-   
