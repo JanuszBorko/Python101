@@ -15,12 +15,16 @@ while resultado == False:
     y = int(input(f"Que numero tengo en mi mente:"))
     if x == y:
         resultado = True
+        print(f"\nCONGRATULATIONS!!!\n{y} es el numero que buscamos. Lo has adivinado en {i} pruebas")
+   
     elif (y > x) and (i<n):
-        i = i+1
         print(f"Numero es MAYOR del buscado!! Prueba otra vez. Te quedan {n-i} intentos\n")
-    elif (y < x) and (i<n):
         i = i+1
+   
+    elif (y < x) and (i<n):
         print(f"Numero es MENOR del buscado!! Prueba otra vez. Te quedan {n-i} intentos\n")
+        i = i+1
+   
     else:
         print("GAME OVER\nYou lost!!")
-print(f"\nCONGRATULATIONS!!!\n{y} es el numero que buscamos. Lo has adivinado en {i} pruebas")
+        resultado = True
