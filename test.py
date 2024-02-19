@@ -132,14 +132,16 @@
 # print(texto)
 
 
-texto = """    Lo más importante que nos ha mantenido en Python... bueno, hay 2 cosas 
-importantes. Uno son las bibliotecas. La otra cosa que nos mantiene en Python, y esto es lo más importante, es 
-facil de leer y entender. Cuando contratamos nuevos empleados. Solo digo, 
-'todo lo que escribas debe estar en python'. Sólo para que pueda leerlo. 
-Y es increíble porque puedo ver desde el otro lado de la habitación, mirando su pantalla, 
-si su código es bueno o malo. Porque un buen código de Python tiene una estructura muy obvia. 
-Y eso hace que mi vida sea mucho más fácil        """
+# texto = """    Lo más importante que nos ha mantenido en Python... bueno, hay 2 cosas 
+# importantes. Uno son las bibliotecas. La otra cosa que nos mantiene en Python, y esto es lo más importante, es 
+# facil de leer y entender. Cuando contratamos nuevos empleados. Solo digo, 
+# 'todo lo que escribas debe estar en python'. Sólo para que pueda leerlo. 
+# Y es increíble porque puedo ver desde el otro lado de la habitación, mirando su pantalla, 
+# si su código es bueno o malo. Porque un buen código de Python tiene una estructura muy obvia. 
+# Y eso hace que mi vida sea mucho más fácil        """
 
-print(texto.upper().count("PYTHON"))
-print(texto.upper().find("PYTHON"))
-print(texto[texto.upper().find("PYTHON")+1:].upper().find("PYTHON"))
+# print(texto.upper().count("PYTHON"))
+# print(texto.upper().find("PYTHON"))
+# print(texto[texto.upper().find("PYTHON")+1:].upper().find("PYTHON"))
+
+
