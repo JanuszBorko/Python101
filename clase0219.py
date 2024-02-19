@@ -95,4 +95,30 @@
 import operMat
 
 if __name__ == "__main__":
-    print(operMat.dividir(8,2))
+#  #   print(operMat.raiz(3))
+#     x = int(input("el largo de la superficie: "))
+#     y = int(input("el ancho de la superficie: "))
+#     print(f"La superficie calculada es: {operMat.multip(x, y)}")  
+
+    print("""
+      Hola, tenemos el siguiente menu:
+      1. Hamburgesa - 5€
+      2. Pizza - 7€
+      3. Patatas - 2€
+      """)  
+
+def pedidoComida(eleccion):
+    IVA = 0.13
+    comidas = {"hamburgesa": 5, "pizza": 7, "patatas": 2}
+    comida = comidas[eleccion]
+    total = comida*(1+IVA)
+    return total
+
+print(pedidoComida("pizza"))
+
+# menu = {1: 5, 2: 7, 3:2}
+# comida = int(input("Que quieres comer? "))
+# cantidad  = int(input("Cuanto quieres? "))
+
+# precio = menu[comida]
+# print(f"Sale para pagar {operMat.multip(precio,cantidad)} euros")
