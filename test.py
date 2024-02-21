@@ -193,4 +193,4 @@ def encontrarPalabra(text):
 texto= "Me gustan los garbanzos"
 print(encontrarPalabra(texto))
 
-print(square(-2))
+print(square(2))
