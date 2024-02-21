@@ -145,3 +145,52 @@
 # print(texto[texto.upper().find("PYTHON")+1:].upper().find("PYTHON"))
 
 
+# s = ' A sentence with whitespace. \n'
+# print('{}'.format(s.lstrip()))
+
+# texto: list[int] = ['a', 2]
+# texto2 = "euskara gustatzen zait"
+
+# print(type(texto))
+# print(type(texto2))
+
+
+
+# if "gustatzen" in texto2: print(True)
+
+# texto_sep: list[str]=texto2.split()
+# print(" y ".join(texto_sep))
+
+# import os
+# os.system(' /?')
+
+def positive_input(func):
+  def wrapper(x):
+    if x <= 0:
+      raise ValueError("Input must be positive")
+    return func(x)
+  return wrapper
+
+@positive_input
+def square(x):
+  return x**2
+
+def encontrarPalabra(text):
+    palabras = texto.split()
+    max_len = 0
+    max_palabra = ""
+
+
+
+    for palabra in palabras:
+        if len(palabra) > max_len:
+            max_len = len(palabra)
+            max_palabra = palabra
+
+    return max_len, max_palabra
+
+
+texto= "Me gustan los garbanzos"
+print(encontrarPalabra(texto))
+
+print(square(-2))

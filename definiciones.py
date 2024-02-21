@@ -42,7 +42,7 @@ def pares(numero:int):
     if numero % 2 == 0:
         return "El numero es par"
     else:
-        return "El numero is inpar"
+        return "El numero is impar"
 
 def maximo(*args):
     max = float('-inf')
