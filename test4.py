@@ -37,7 +37,11 @@
 # except EmailNotValidError as e:
 #     print(str(e))
 
-from plyer import notification as notif
+from plyer import notification
 import time
-mensaje = "hola"
-notif.notify(title="Hola", message="hola", timeout = 10)
+
+
+notification.notify(title="Hola",
+    message="Nos queda 15 minutos", timeout=5)
+
+ 
