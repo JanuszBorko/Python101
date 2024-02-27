@@ -42,3 +42,5 @@ with right_column:
 add_slider = st.sidebar.slider('Select a range', 0.0, 100.0, (25.0, 75.0))
 
 st.write(add_slider)
+#test
+
