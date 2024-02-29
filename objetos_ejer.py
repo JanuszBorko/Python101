@@ -1,23 +1,50 @@
 from time import sleep
 
-class bebidas:
-    def __init__(self, taza, tipo, volumen) -> None:
-        self.tipo = tipo
+class Bebidas:
+    def __init__(self, taza:str, tipo:str, volumen:int) -> None:
         self.taza = taza
+        self.tipo = tipo
         self.volumen = volumen
-    
-    def beber(self):
-        print(f"Estas bebiendo {self.tipo} en {self.taza} de {self.volumen}\n")
 
-# main program
+    
+    def __str__(self) -> str:
+        return f"Has pedido {self.tipo} en {self.taza} de {self.volumen}ml\n"
+
+    def resumen(self):
+        print(f"Has pedido {self.tipo} en {self.taza} de {self.volumen}ml\n")
+    
+    def beber(self,c):
+        self.cantidad = self.cantidad - c
+
+# -----------------------------main program
         
 print("Bienvenido en CafeBucks")
-tipo = input("Que quiere tomar? ")
-taza = input("Lo quieres en baso o en una taza? ")
-tamano = input("Que tamaño quiere: 150ml / 250ml / 500ml? ")   
-bebida = bebidas(taza, tipo, tamano)
-print("Gracias por tu pedido \n")
 
-sleep(1)
-bebida.beber()
-sleep(1)
+pedido: bool = True
+listaBebidas = []
+
+while pedido == True:
+
+    tipo: str = input("Que quiere tomar? ")
+    taza: str = input("Lo quieres en baso o en una taza? ")
+    tamano: int = input("Que tamaño quiere: 150ml / 250ml / 500ml? ")
+    
+    if input("Quiere algo más Y/N?? ").upper() == "N": pedido = False
+
+    bebida = Bebidas(taza, tipo, tamano)
+    listaBebidas.append(bebida)
+
+print("\n")
+for bebida in listaBebidas:
+    print(bebida)
+    
+
+
+
+# tipo = "Has pedido " + input("Que quiere beber ahora: ")
+# for tipo in listaBebidas:
+#     print(tipo)
+
+print("\nGracias por tu pedido \n")
+
+
