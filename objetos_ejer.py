@@ -8,13 +8,13 @@ class Bebidas:
 
     
     def __str__(self) -> str:
-        return f"Has pedido {self.tipo} en {self.taza} de {self.volumen}ml\n"
+        return f"Bebidas.tipo, Bebidas.taza, Bebidas.volumen"
 
     def resumen(self):
         print(f"Has pedido {self.tipo} en {self.taza} de {self.volumen}ml\n")
     
     def beber(self,c):
-        self.cantidad = self.cantidad - c
+        self.volumen = int(self.volumen) - c
 
 # -----------------------------main program
         
@@ -35,9 +35,10 @@ while pedido == True:
     listaBebidas.append(bebida)
 
 print("\n")
-for bebida in listaBebidas:
-    print(bebida)
-    
+
+trago = int(input("Cuanto quieres beber"))
+cantidad = bebida.beber(trago)
+print(cantidad)    
 
 
 

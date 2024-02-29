@@ -4,32 +4,39 @@ class Guitarra:
         self.cuerdas = cuerdas
         self._precio = 100          # medio privado
 
-
     def __str__(self):
         return "hola guitarra"
 
     def tocar(self):
-        print(f"soy {self.marca} y brrn, brnnn, brennnn")
+        if self.cuerdas > 0:
+            print(f"soy {self.marca} y brrn, brnnn, brennnn")
+        else:
+            print(f"No puedes tocar sin cuerdas ")
         
     def romperCuerdas(self, cuerdasRotas):
-        self.cuerdas = self.cuerdas - cuerdasRotas
-        print(f"Me he quedado con {self.cuerdas} cuerdas")
+        if cuerdasRotas <= self.cuerdas:
+            self.cuerdas = self.cuerdas - cuerdasRotas
+            print(f"Me he quedado con {self.cuerdas} cuerdas")
+        else:
+            print("No puedes romper más cuerdas de las que tengas")
 
+class GuitarraElectrica(Guitarra):
+    def __init__(self, marca, cuerdas, distorsion) -> None: 
+        super().__init__(marca, cuerdas)        # para ejecutar el constructor de arriba
+        self.distorsion = distorsion
 
-
+    def tocar(self):
+        print(f"soy {self.marca} y brrn, brnnn, brennnn".upper())
 # main program - instanciar / usar la clase
 
-# nombre = input("Cual es le nombre de la guitarra ")
-# guit1 = Guitarra(nombre)
-# print(guit1.marca)
-# print(guit1.cuerdas)
-# # bajo = Guitarra("bajo sencillo", 4)
-# # bajo.cuerdas=5
-# # print(bajo.cuerdas)
-# guit1.tocar()
-# print(guit1)
 
-guit = Guitarra("Les Paul", 6)
+guit = GuitarraElectrica("Les Paul", 6,100)
 print(guit.cuerdas)
-guit.romperCuerdas(1)
-print(guit.cuerdas)
+print(guit.distorsion)
+guit.tocar()
+
+# while guit.cuerdas > 0:
+#     curRotas = int(input("cuantas cuerdas has roto? "))
+#     guit.romperCuerdas(curRotas)
+#     print(guit.cuerdas)
+#     guit.tocar()
