@@ -11,6 +11,9 @@ class Programador(Empleado):
       super().__init__(nombre, nomina, puesto)
       self.lenguaje = lenguaje
 
+    def calcular_nomina(self):
+       return self.nomina*1.2
+
 
 class Sistemas_Nominas():
     def __init__(self, empleados) -> None:
