@@ -8,7 +8,7 @@ class Padre:
     def cocinar(self):
         print("Me gusta cocinar")
 
-class Hijo(Madre, Padre):
+class Hijo(Madre, Padre): #importante el orden MRO (method Resolution )
     pass
 
 
