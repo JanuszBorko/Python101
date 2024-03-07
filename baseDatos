@@ -1,0 +1,34 @@
+select * from Usuarios
+where id = 3;
+
+UPDATE Usuarios
+SET activo = 0
+WHERE ID = 3;
+
+DELETE FROM Usuarios
+WHERE ID = 3;    
+
+describe Usuarios
+
+INSERT INTO Usuarios (Id, Nombre, Email, Activo)
+VALUES (1, 'Isabel', 'isabel@email.com', 1)
+INSERT INTO Usuarios (Id, Nombre, Email, Activo)
+VALUES (2, 'Jon', 'jon@email.com', 1);
+INSERT INTO Usuarios (Id, Nombre, Email, Activo)
+VALUES (3, 'Mark', 'mark@email.com', 1);
+INSERT INTO Usuarios (Id, Nombre, Email, Activo)
+VALUES (5, 'Tom', 'tom@email.com', 1);
+
+
+
+SELECT *
+FROM scott.emp;
+
+SELECT *
+FROM scott.dept;
+
+SELECT ENAME,  SAL
+FROM scott.emp
+JOIN scott.dept ON emp.deptno = dept.deptno
+WHERE LOC = 'NEW YORK' AND SAL > 2000
+ORDER BY SAL DESC
