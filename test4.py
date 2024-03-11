@@ -37,11 +37,30 @@
 # except EmailNotValidError as e:
 #     print(str(e))
 
-from plyer import notification
-import time
+# from plyer import notification
+# import time
 
 
-notification.notify(title="Hola",
-    message="Nos queda 15 minutos", timeout=5)
+# notification.notify(title="Hola",
+#     message="Nos queda 15 minutos", timeout=5)
 
+# import sqlite3
+
+# conn = sqlite3.connect('pelis.db')
+# conn.execute('CREATE TABLE Empleados (id integer, nombre text, salario float)')
+
+# conn.close()
  
+# frutas = ['MANZAS', 'pera', 'NARANJA', 'uva', 'MELON']
+# # nueva_fruta= []
+
+# # for fruta in frutas:
+# #     if fruta.isupper():
+# #         nueva_fruta.append(fruta)
+
+# # print(nueva_fruta)
+
+# print([fruta for fruta in frutas if fruta.isupper()])
+
+numeros = [2,6,7,3,4,8]
+print(["par" if numero%2 == 0 else "inpar" for numero in numeros])
