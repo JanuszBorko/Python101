@@ -62,5 +62,58 @@
 
 # print([fruta for fruta in frutas if fruta.isupper()])
 
-numeros = [2,6,7,3,4,8]
-print(["par" if numero%2 == 0 else "inpar" for numero in numeros])
+# numeros = [2,6,7,3,4,8]
+# print(["par" if numero%2 == 0 else "inpar" for numero in numeros])
+
+# def sumar(x, y):
+#     return x+y
+
+# z = sumar(3, 2)
+# print(z)
+
+# sumar = lambda x, y: x + y
+
+# print(sumar(10, 5))
+
+# print((lambda x, y: x + y)(10, 1))
+
+# up = lambda s: s.upper()
+# print(up("hola"))
+
+# hola = lambda s: "kaixo "+s
+
+# print(hola("Jon"))
+
+# par = lambda s: "par" if s%2==0 else "inpar" 
+
+# s= [1,2,3,4,5]
+# for _ in s:
+#     print(par(_), end=" ")
+
+# print()
+# sign = lambda x: "negat" if x<0 else "posit"   
+# s= [-1,2,-3,4,-5]
+# for _ in s:
+#     print(sign(_), end=" ")
+
+# productos = ["raqueta", "balon", "guantes", "pelota"]
+
+# up = [product.capitalize() for product in productos]
+
+# for _ in up:     
+#     print(_)
+
+# def convertir_may(s):
+#     return s.capitalize()  
+
+# print(list(map(convertir_may, productos)))  #map es una forma de bucle en un una linea
+# print(list(map(lambda s: s.capitalize(), productos))) 
+
+import math
+
+lista = [4,5,6]
+lista2 = [1,2,3]
+lista3 = [7,8,9]
+print(list(map(lambda s: s+2, lista)))
+print(list(map(lambda s: math.sqrt(s), lista)))
+print(list(map(lambda x, y, z: x*y*z, lista, lista2, lista3)))

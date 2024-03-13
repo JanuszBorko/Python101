@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Primer pagina dinamica</h1>
+    <p>Tu nombre es {{nombre}}</p>
+    <p>Tienes {{edad}} años</p>
+
+    <ul>
+    {% for f in frutas %}  <!--para injecar formulas dinamicas-->
+        {% if f.isupper() %}    
+            <li>{{f}}</li>
+        {% endif %}
+    {% endfor %}    
+    </ul>
+</body>
+</html>
