@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Introducir una pelicula nueva</h1>
+    <form action="/add" method="post"> <!-- "post" si quieremos ocltar datos del direccion en browser-->
+        <label for="titulo">Introducir titulo</label>
+        <input type="text" name="titulo" id="titulo">  <br>     <!-- "username" in label y input tienen que ser los mismos-->
+        <label for="duracion">Introducir duracion</label>
+        <input type="text" name="duracion" id="duracion"> <br>
+        <input type="submit" value="Add">
+
+    </form>
+</body>
+</html>

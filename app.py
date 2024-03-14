@@ -1,4 +1,6 @@
-from flask import Flask, render_template # para usar las paginas dinamicas
+from flask import Flask, render_template, request, url_for, redirect # para usar las paginas dinamicas
+import sqlite3
+
 app = Flask (__name__)
 
 from productos import *
@@ -44,6 +46,47 @@ def productos():
     pr3= Producto(3, "pelota", 1.99, "images/pelota.jpeg")
     listaProductos = [pr1, pr2, pr3]
     return render_template("productos.html", listaProductos=listaProductos) #sin app.
+
+@app.route("/dashboard/<string:username>") #<> para pasar los valores de otros definiciones
+def dashboard(username):
+    return f"Ya estas dentro! {username}"
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method=="GET":
+        return render_template("login.html")
+    else: #POST
+        username = request.form["username"]
+        password = request.form["password"]
+        if username == "jan" and password == "666":
+            return redirect(url_for('dashboard', username=username))
+        else:
+            return "contraseña incorrecta"
+       # return f"submit resultados con POST {username} y {password}"
+
+@app.route('/pelis')
+def peliculas():
+    conn = sqlite3.connect('pelis2.db')
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM pelis;")
+    rows = cur.fetchall()
+    conn.close()
+    return render_template("peliculas.html", rows = rows) #sin app.
+
+@app.route('/add', methods=['GET', 'POST'])
+def add():
+    if request.method=="GET":
+        return render_template("add.html")
+    else: #POST
+        titulo = request.form["titulo"]
+        duracion = request.form["duracion"]
+        conn = sqlite3.connect('pelis2.db')
+        cur = conn.cursor()
+        cur.execute("INSERT INTO pelis (nombre, duracion) VALUES (?,?);", (titulo, duracion))
+        conn.commit()
+        conn.close()           
+        return redirect(url_for('peliculas'))
+
 
 if __name__ == '__main__':  # siempre abajo de todo
     app.run(debug=True)

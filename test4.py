@@ -109,11 +109,53 @@
 # print(list(map(convertir_may, productos)))  #map es una forma de bucle en un una linea
 # print(list(map(lambda s: s.capitalize(), productos))) 
 
-import math
+# import math
 
-lista = [4,5,6]
-lista2 = [1,2,3]
-lista3 = [7,8,9]
-print(list(map(lambda s: s+2, lista)))
-print(list(map(lambda s: math.sqrt(s), lista)))
-print(list(map(lambda x, y, z: x*y*z, lista, lista2, lista3)))
+# lista = [4,5,6]
+# lista2 = [1,2,3]
+# lista3 = [7,8,9]
+# print(list(map(lambda s: s+2, lista)))
+# print(list(map(lambda s: math.sqrt(s), lista)))
+# print(list(map(lambda x, y, z: x*y*z, lista, lista2, lista3)))
+
+
+lenguajes = ["Python", "Javascript", "Java", "React", "Swift"]
+
+# def lenght(lenguajes):
+#     return lambda x: len(x)>5
+#lenght = lambda x: len(x)>5
+
+print([x for x in lenguajes if len(x)<=5])
+
+x = filter(lambda x: len(x)<=5, lenguajes)
+print(list(x))
+
+print(list(filter(lambda x: len(x)<=5, lenguajes)))
+
+
+usuarios = [{"nombre": "Jon", "edad": 25},
+            {"nombre": "Isabel", "edad": 65},
+            {"nombre": "David", "edad": 41}]
+
+print(list(filter(lambda x: x["edad"]>=40, usuarios)))
+
+
+ventas = [('2021-05-31', 1500),
+          ('2021-04-30', 1200),
+          ('2021-03-31', 800),
+          ('2021-02-28', 8000)
+            ]
+
+x = list(filter(lambda x: x[1]>1000 and x[1]<2000, ventas))
+print(x[:])
+
+
+import sqlite3
+
+conn = sqlite3.connect('pelis2.db')
+cur = conn.cursor()
+cur.execute("SELECT * FROM pelis;")
+rows = cur.fetchall()
+conn.close()
+for row in rows:
+    print(row)

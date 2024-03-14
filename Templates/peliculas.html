@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <h1>Lista de productos</h1>
+    <ul>
+        <table align="left">
+            <tr>
+                <th>ID</th>
+                <th>Titulo</th>
+                <th>Duracion</th>
+            </tr>
+        {% for p in rows %} 
+            <tr>
+          <!--para injecar formulas dinamicas-->     
+                <td>{{p[0]}}</td>
+                <td>{{p[1]}}</td>
+                <td>{{p[2]}}</td> 
+            </tr>
+        {% endfor %}    
+        </table>   
+    </ul>
+
+
+</body>
+</html>

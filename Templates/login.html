@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login page</title>
 </head>
 <body>
     <h1>Pagina de login</h1>
-    
+    <form action="/login" method="post"> <!-- "post" si quieremos ocltar datos del direccion en browser-->
+        <label for="username">Introducir username</label>
+        <input type="text" name="username" id="username">  <br>     <!-- "username" in label y input tienen que ser los mismos-->
+        <label for="password">Introducir password</label>
+        <input type="password" name="password" id="password"> <br>
+        <input type="submit" value="Login">
+
+    </form>
 </body>
 </html>
